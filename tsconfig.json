@@ -1,18 +1,21 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "CommonJS",
-      "declaration": true,
-        "strict": true,
-        "outDir": "./dist",
-        "jsx": "react",
-        // "noImplicitAny": true,
-         "esModuleInterop": true,
-        // "strictNullChecks": true,
-        "moduleResolution": "Node",
-        // "isolatedModules": true,
-        // "noEmit": true,
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__dist__/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/__dist__/*"],
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "module": "esnext",
+    "sourceMap": true,
+    "outDir": "dist",
+    "target": "es5",
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
+    }
+  }
 }

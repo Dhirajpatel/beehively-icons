@@ -1,13 +1,16 @@
 {
-  "name": "react-bicon",
+  "name": "react-bicons",
   "version": "0.0.1",
   "description": "Beehively App Icon Set",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build"
+    "svgr": "npx @svgr/cli --ref --icon --typescript --ext tsx --out-dir src/icons src/svg",
+    "generate-src": "generate-icon-lib --file=9Df5CaFUEomVzn20gRpaX3 && mv ./icons/* ./icons && rmdir ./icons/ && cd ./icons && zip -r ../../../radix-icons.zip ./",
+    "build": "rimraf dist && tsdx build --format es,cjs --entry src/icons/index.tsx",
+    "watch": "rimraf dist && tsdx watch --format es,cjs --entry src/icons/index.tsx",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,15 +23,13 @@
   },
   "homepage": "https://github.com/Dhirajpatel/react-bicon#readme",
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "@types/react": "^18.2.46",
-    "@types/react-dom": "^18.2.18"
+    "@svgr/cli": "^8.1.0",
+    "tsdx": "0.14.1"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*, index.js"
   ]
 }
