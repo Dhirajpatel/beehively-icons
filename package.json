@@ -31,5 +31,12 @@
   },
   "files": [
     "dist/**/*, index.js"
+  ],
+  "keywords": [
+    "icons",
+    "outline",
+    "svg",
+    "Rounded",
+    "react"
   ]
 }
