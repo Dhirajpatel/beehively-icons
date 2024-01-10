@@ -8,7 +8,7 @@ The Beehively Icons component library is designed for seamless integration into 
 
 ## Credits
 
-The icon designs are originally by flaticon.
+The icon designs originate from flaticon.
 
 ## License
 
