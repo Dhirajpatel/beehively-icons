@@ -1,5 +1,5 @@
 {
-  "name": "react-bicons",
+  "name": "beehively-icons",
   "version": "0.0.1",
   "description": "Beehively App Icon Set",
   "main": "index.js",
@@ -7,21 +7,21 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "svgr": "npx @svgr/cli --ref --icon --typescript --ext tsx --out-dir src/icons src/svg",
-    "generate-src": "generate-icon-lib --file=9Df5CaFUEomVzn20gRpaX3 && mv ./icons/* ./icons && rmdir ./icons/ && cd ./icons && zip -r ../../../radix-icons.zip ./",
     "build": "rimraf dist && tsdx build --format es,cjs --entry src/icons/index.tsx",
     "watch": "rimraf dist && tsdx watch --format es,cjs --entry src/icons/index.tsx",
+     "test": "tsdx test",
     "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dhirajpatel/react-bicon.git"
+    "url": "git+https://github.com/Dhirajpatel/beehively-icons.git"
   },
   "author": "Dhirajpatel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dhirajpatel/react-bicon/issues"
+    "url": "https://github.com/Dhirajpatel/beehively-icons/issues"
   },
-  "homepage": "https://github.com/Dhirajpatel/react-bicon#readme",
+  "homepage": "https://github.com/Dhirajpatel/beehively-icons#readme",
   "peerDependencies": {
     "react": "^18.2.0"
   },
