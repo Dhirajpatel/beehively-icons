@@ -1,15 +1,12 @@
 {
   "name": "beehively-icons",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Beehively App Icon Set",
-  "main": "index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "svgr": "npx @svgr/cli --ref --icon --typescript --ext tsx --out-dir src/icons src/svg",
-    "build": "rimraf dist && tsdx build --format es,cjs --entry src/icons/index.tsx",
-    "watch": "rimraf dist && tsdx watch --format es,cjs --entry src/icons/index.tsx",
-     "test": "tsdx test",
+    "svgr": "svgr --out-dir src/ src/svg --ext tsx --icon",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -22,21 +19,30 @@
     "url": "https://github.com/Dhirajpatel/beehively-icons/issues"
   },
   "homepage": "https://github.com/Dhirajpatel/beehively-icons#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
-    "tsdx": "0.14.1"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "prettier": "^3.2.4",
+    "typescript": "^4.5.4"
   },
   "files": [
-    "dist/**/*, index.js"
+    "dist"
   ],
   "keywords": [
     "icons",
     "outline",
     "svg",
     "Rounded",
-    "react"
+    "react",
+    "beehively"
   ]
 }
