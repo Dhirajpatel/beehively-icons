@@ -1,21 +1,3 @@
-// {
-//   "include": ["src/**/*"],
-//   "exclude": ["node_modules", "**/__dist__/*"],
-//   "compilerOptions": {
-//     //"forceConsistentCasingInFileNames": true,
-//     //"resolveJsonModule": true,
-//     //"moduleResolution": "node",
-//    // "esModuleInterop": true,
-//     "noImplicitAny": false,
-//     //"skipLibCheck": true,
-//     //--"module": "esnext",
-//     "sourceMap": true,
-//     "outDir": "dist",
-//     //"target": "es5",
-//     "baseUrl": ".",
-//     //"jsx": "react",
-//   }
-// }
 {
   "compilerOptions": {
     "target": "es5",
@@ -29,9 +11,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "declaration": true,
-    "declarationDir": "./dist",
-    "rootDir": "./src"
+    "outDir": "dist",
+    "baseUrl": "."
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/__dist__/*"]
 }
