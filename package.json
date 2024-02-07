@@ -1,13 +1,17 @@
 {
   "name": "beehively-icons",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Beehively App Icon Set",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "module": "dist/index.js",
+  "sideEffects": false,
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "svgr": "svgr --out-dir src/ src/svg --ext tsx --icon",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "rm -rf src/icons && node bin/build.js",
+    "build:bundle": "rm -rf build && rollup --config rollup.config.js",
+    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
+    "build": "concurrently \"npm:build:*\""
   },
   "repository": {
     "type": "git",
@@ -19,23 +23,34 @@
     "url": "https://github.com/Dhirajpatel/beehively-icons/issues"
   },
   "homepage": "https://github.com/Dhirajpatel/beehively-icons#readme",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "prettier-eslint": "^9.0.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "uppercamelcase": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": ">=18.2.0"
   },
-  "devDependencies": {
-    "@svgr/cli": "^8.1.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "prettier": "^3.2.4",
-    "typescript": "^5.3.3"
+  "dependencies": {
+    "prop-types": "^15.8.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "es"
   ],
   "keywords": [
     "icons",
