@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Menu = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+const MenuLine = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -19,11 +19,11 @@ const Menu = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
   );
 });
 
-Menu.propTypes = {
+MenuLine.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Menu.displayName = 'Menu';
+MenuLine.displayName = 'MenuLine';
 
-export default Menu;
+export default MenuLine;

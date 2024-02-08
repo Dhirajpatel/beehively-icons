@@ -11,11 +11,11 @@ npm install beehively-icons
 ### Usage
 
 ```javascript
-import React from "react";
-import {BiBee} from "beehively-icons";
+import React from 'react';
+import { Bee } from 'beehively-icons';
 
 const App = () => {
-  return <BiBee />;
+  return <Bee />;
 };
 
 export default App;
@@ -24,17 +24,17 @@ export default App;
 Icons can be configured with inline props:
 
 ```javascript
-<BiBee color="red" size={48} />
+<Bee color="red" size={48} />
 ```
 
 You can also include the whole icon pack:
 
 ```javascript
-import React from "react";
-import * as Icon from "beehively-icons";
+import React from 'react';
+import * as Icon from 'beehively-icons';
 
 const App = () => {
-  return <Icon.BiBee />;
+  return <Icon.Bee />;
 };
 
 export default App;
