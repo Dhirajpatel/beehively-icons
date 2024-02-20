@@ -7,7 +7,7 @@ const upperCamelCase = require('uppercamelcase');
 
 const rootDir = path.join(__dirname, '..');
 
-const svgDir = path.join(rootDir, 'src/svg');
+const svgDir = path.join(rootDir, 'svg');
 
 const icons = fs.readdirSync(svgDir).filter((file) => file.endsWith('.svg'));
 
