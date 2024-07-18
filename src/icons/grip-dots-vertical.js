@@ -12,12 +12,12 @@ const GripDotsVertical = forwardRef(({ color = 'currentColor', size = 24, ...res
       fill={color}
       {...rest}
     >
-      <circle cx="181.2" cy="106.4" r="42.7" />
-      <circle cx="181.2" cy="255.7" r="42.7" />
-      <circle cx="181.2" cy="405" r="42.7" />
-      <circle cx="330.8" cy="107" r="42.7" />
-      <circle cx="330.8" cy="256.3" r="42.7" />
-      <circle cx="330.8" cy="405.6" r="42.7" />
+      <circle cx="8.3" cy="4.6" r="2.1" />
+      <circle cx="8.3" cy="12" r="2.1" />
+      <circle cx="8.3" cy="19.4" r="2.1" />
+      <circle cx="15.7" cy="4.6" r="2.1" />
+      <circle cx="15.7" cy="12" r="2.1" />
+      <circle cx="15.7" cy="19.4" r="2.1" />
     </svg>
   );
 });

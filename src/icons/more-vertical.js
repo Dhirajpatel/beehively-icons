@@ -12,9 +12,9 @@ const MoreVertical = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       fill={color}
       {...rest}
     >
-      <circle cx="256" cy="256" r="42.7" />
-      <circle cx="256" cy="106.7" r="42.7" />
-      <circle cx="256" cy="405.3" r="42.7" />
+      <circle cx="12" cy="12" r="2" />
+      <circle cx="12" cy="4.8" r="2" />
+      <circle cx="12" cy="19.2" r="2" />
     </svg>
   );
 });
