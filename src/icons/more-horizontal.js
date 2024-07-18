@@ -12,9 +12,9 @@ const MoreHorizontal = forwardRef(({ color = 'currentColor', size = 24, ...rest 
       fill={color}
       {...rest}
     >
-      <circle cx="2" cy="12" r="2" />
-      <circle cx="12" cy="12" r="2" />
-      <circle cx="22" cy="12" r="2" />
+      <circle cx="256" cy="256" r="42.7" />
+      <circle cx="106.7" cy="256" r="42.7" />
+      <circle cx="405.3" cy="256" r="42.7" />
     </svg>
   );
 });

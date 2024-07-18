@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MoreVertical = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+const Underline = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -12,18 +12,17 @@ const MoreVertical = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       fill={color}
       {...rest}
     >
-      <circle cx="256" cy="256" r="42.7" />
-      <circle cx="256" cy="106.7" r="42.7" />
-      <circle cx="256" cy="405.3" r="42.7" />
+      <path d="M12,20a8.009,8.009,0,0,0,8-8V1a1,1,0,0,0-2,0V12A6,6,0,0,1,6,12V1A1,1,0,0,0,4,1V12A8.009,8.009,0,0,0,12,20Z" />
+      <path d="M23,22H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" />
     </svg>
   );
 });
 
-MoreVertical.propTypes = {
+Underline.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MoreVertical.displayName = 'MoreVertical';
+Underline.displayName = 'Underline';
 
-export default MoreVertical;
+export default Underline;
